@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-r from-indigo-100 via-purple-400 to-pink-400 py-10">
+    <footer className="bg-gradient-to-r from-indigo-300 via-purple-400 to-pink-400 py-10">
       <div className="container mx-auto px-4 text-white">
         
         <div className="text-center mb-10">

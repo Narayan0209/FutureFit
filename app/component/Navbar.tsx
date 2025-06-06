@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className=" border-b-2  bg-gradient-to-r from-indigo-100 via-purple-300 to-pink-400 mb-100 p-6 shadow-md">
+    <nav className=" border-b-2  bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-400 mb-100 p-6 shadow-md">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         
         <Link href="/" className="text-xl font-bold text-gray-800">
@@ -39,16 +39,16 @@ export default function Navbar() {
           <Link href="/contactus" className="text-black hover:text-purple-800">
             Contact Us
           </Link>
-          <form className="flex items-center px-2">
+           <Link href="/login" className="text-black hover:text-purple-600">
+            Login
+          </Link>
+          {/* <form className="flex items-center px-2">
             <input
               className=" bg-transparent outline-none"
               type="search"
               placeholder="Search..."
             />
-          </form>
-          <Link href="/login" className="text-black hover:text-purple-600">
-            Login
-          </Link>
+          </form> */}
           {/* <Link href="/signup" className="text-gray-800 hover:text-purple-600">
             Sign Up
           </Link> */}
@@ -72,7 +72,7 @@ export default function Navbar() {
             {/* <Link href="/signup" className="text-gray-800 hover:text-purple-600">
               Sign Up
             </Link> */}
-            <form className="flex items-center mt-2">
+            {/* <form className="flex items-center mt-2">
               <input
                 className="bg-transparent outline-none w-full"
                 type="search"
@@ -84,7 +84,7 @@ export default function Navbar() {
                 aria-label="Search"
               >
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>
