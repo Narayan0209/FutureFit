@@ -120,7 +120,7 @@ export default function HomePage() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="object-cover w-full h-full"
+                    className="object-fit: cover w-full h-full"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-300 flex items-center justify-center">
                     <p className="text-white text-lg font-semibold text-center px-2">

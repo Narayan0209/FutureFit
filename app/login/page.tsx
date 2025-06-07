@@ -29,24 +29,54 @@ const Form = () => {
     setFormEntry({ ...formEntry, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const validationErrors = validate(formEntry);
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length > 0) return;
 
-    if (isEditing) {
-      const updatedUsers = [...users];
-      updatedUsers[editIndex] = formEntry;
-      setUsers(updatedUsers);
-      setIsEditing(false);
-    } else {
-      setUsers([...users, formEntry]);
-    }
+    try {
+      const response = await fetch(`/api/${isSignup ? "register" : "login"}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formEntry),
+      });
 
-    setFormEntry({ phonenumber: '', email: '', password: '' });
+      const data = await response.json();
+
+      if (!response.ok) {
+        alert(data.message || "Something went wrong");
+      } else {
+        alert(data.message);
+        setUsers((prev) => [...prev, formEntry]);
+        setFormEntry({ phonenumber: "", email: "", password: "" });
+      }
+    } catch (error) {
+      alert("Failed to connect to server");
+      console.error(error);
+    }
   };
+
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   const validationErrors = validate(formEntry);
+  //   setErrors(validationErrors);
+
+  //   if (Object.keys(validationErrors).length > 0) return;
+
+  //   if (isEditing) {
+  //     const updatedUsers = [...users];
+  //     updatedUsers[editIndex] = formEntry;
+  //     setUsers(updatedUsers);
+  //     setIsEditing(false);
+  //   } else {
+  //     setUsers([...users, formEntry]);
+  //   }
+
+  //   setFormEntry({ phonenumber: '', email: '', password: '' });
+  // };
 
   const handleEdit = (index: number) => {
     setFormEntry(users[index]);
