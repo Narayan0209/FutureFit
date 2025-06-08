@@ -46,13 +46,28 @@ const Form = () => {
 
       const data = await response.json();
 
+      // if (!response.ok) {
+      //   alert(data.message || "Something went wrong");
+      // } else {
+      //   alert(data.message);
+      //   setUsers((prev) => [...prev, formEntry]);
+      //   setFormEntry({ phonenumber: "", email: "", password: "" });
+      // }
       if (!response.ok) {
         alert(data.message || "Something went wrong");
       } else {
         alert(data.message);
-        setUsers((prev) => [...prev, formEntry]);
+
+        if (isSignup) {
+          setUsers((prev) => [...prev, formEntry]); // Add only during signup
+        }
+
         setFormEntry({ phonenumber: "", email: "", password: "" });
+
+        // Optional: Redirect after login (e.g., to dashboard)
+        // router.push('/dashboard'); // If using useRouter from next/navigation
       }
+
     } catch (error) {
       alert("Failed to connect to server");
       console.error(error);
