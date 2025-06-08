@@ -46,13 +46,6 @@ const Form = () => {
 
       const data = await response.json();
 
-      // if (!response.ok) {
-      //   alert(data.message || "Something went wrong");
-      // } else {
-      //   alert(data.message);
-      //   setUsers((prev) => [...prev, formEntry]);
-      //   setFormEntry({ phonenumber: "", email: "", password: "" });
-      // }
       if (!response.ok) {
         alert(data.message || "Something went wrong");
       } else {
@@ -74,24 +67,6 @@ const Form = () => {
     }
   };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   const validationErrors = validate(formEntry);
-  //   setErrors(validationErrors);
-
-  //   if (Object.keys(validationErrors).length > 0) return;
-
-  //   if (isEditing) {
-  //     const updatedUsers = [...users];
-  //     updatedUsers[editIndex] = formEntry;
-  //     setUsers(updatedUsers);
-  //     setIsEditing(false);
-  //   } else {
-  //     setUsers([...users, formEntry]);
-  //   }
-
-  //   setFormEntry({ phonenumber: '', email: '', password: '' });
-  // };
 
   const handleEdit = (index: number) => {
     setFormEntry(users[index]);

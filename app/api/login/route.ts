@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import User from '@/lib/models/User';
-import { connectDB } from '@/lib/mongodb';
+import connectDB from '@/lib/mongodb'; // ✅ FIXED: Changed named import to default import
 import bcrypt from 'bcrypt';
 
 export async function POST(req: NextRequest) {
   try {
-    await connectDB();
+    await connectDB(); // ✅ use connectDB (default import)
     const { email, password } = await req.json();
 
     const user = await User.findOne({ email });

@@ -1,3 +1,4 @@
+// lib/mongodb.ts
 import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI as string;
@@ -23,4 +24,4 @@ async function dbConnect() {
 
 (global as any).mongoose = cached;
 
-export default dbConnect;
+export default dbConnect; // ✅ Correctly using default export
