@@ -21,7 +21,7 @@ export default function BComPage() {
           <li>BCom General</li>
           <li>BCom Honours</li>
           <li>BCom (Accounting and Finance)</li>
-          <li>BCom (Banking & Insurance)</li>
+<li>BCom (Banking &amp; Insurance)</li>
           <li>BCom (Corporate Secretaryship)</li>
         </ul>
 

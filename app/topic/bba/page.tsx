@@ -11,7 +11,6 @@ export default function BBAPage() {
           BBA is a professional undergraduate course that provides foundational knowledge in business management, entrepreneurship, marketing, finance, and HR. It&apos;s a stepping stone for leadership and managerial roles.
         </p>
 
-
         <h2 className="text-2xl font-semibold text-pink-600 mt-6 mb-2">How to Join BBA?</h2>
         <p className="text-gray-700 mb-4">
           Students from any stream after 12th can apply. Admissions are either merit-based or through entrance exams like DU JAT, NPAT, IPU CET, and CUET, depending on the university.
