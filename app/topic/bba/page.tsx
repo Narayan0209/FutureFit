@@ -8,8 +8,9 @@ export default function BBAPage() {
       <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
         <h1 className="text-4xl font-bold text-purple-700 mb-6">BBA (Bachelor of Business Administration)</h1>
         <p className="text-gray-700 mb-4">
-          BBA is a professional undergraduate course that provides foundational knowledge in business management, entrepreneurship, marketing, finance, and HR. It's a stepping stone for leadership and managerial roles.
+          BBA is a professional undergraduate course that provides foundational knowledge in business management, entrepreneurship, marketing, finance, and HR. It&apos;s a stepping stone for leadership and managerial roles.
         </p>
+
 
         <h2 className="text-2xl font-semibold text-pink-600 mt-6 mb-2">How to Join BBA?</h2>
         <p className="text-gray-700 mb-4">
