@@ -111,9 +111,8 @@ export default function HomePage() {
                 <div
                   key={index}
                   onClick={() =>
-                    router.push(
-                      `/topic/${item.title.trim().toLowerCase().replace(/\s+/g, "-")}`
-                    )
+                    router.push(`/topic/${item.title.trim().toLowerCase().replace(/\s+/g, "")}`)
+
                   }
                   className="cursor-pointer relative group overflow-hidden rounded-xl shadow-md transition-transform hover:scale-105 h-48 w-full"
                 >
